@@ -10,6 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
+                credentialsId: 'githu-ssh-key',
                 url: 'git@github.com:Payal-Setiya/springboot-devsecops-poc.git'
             }
         }
